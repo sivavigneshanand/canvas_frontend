@@ -60,6 +60,7 @@ const DrawingBoard = () => {
       ws.close();
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loggedIn,userName]);
 
     // Helper to get mouse position on the canvas
@@ -165,13 +166,13 @@ const DrawingBoard = () => {
       ></canvas>
 
       <div style={{ textAlign: 'center' }}>
-        <label>Brush Color:</label>
+        <p>Brush Color:</p>
         <input
           type="color"
           value={brushColor}
           onChange={(e) => setBrushColor(e.target.value)}
         />
-        <label>Brush Size:</label>
+        <p>Brush Size:</p>
         <input
           type="number"
           value={brushSize}
