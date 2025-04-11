@@ -25,7 +25,7 @@ const DrawingBoard = () => {
 
     if (!loggedIn) return;
 
-    const ws = new WebSocket('wss://hyring-r9j4t6ikc-sivavigneshanands-projects.vercel.app/api/websocket');
+    const ws = new WebSocket('wss://canvasbackend-production.up.railway.app');
     wsRef.current = ws;
 
     ws.onopen = () => {
